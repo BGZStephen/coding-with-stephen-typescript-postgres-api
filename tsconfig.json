@@ -29,7 +29,7 @@
     "listFiles": false /* Print names of files part of the compilation. */,
     "pretty": true /* Stylize errors and messages using color and context. */,
     "lib": ["es2017"],
-    "types": [],
+    "types": ["node", "jest"],
     "skipLibCheck": true
   },
   "include": ["src/**/*.ts"],
