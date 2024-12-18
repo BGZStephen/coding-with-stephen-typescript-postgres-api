@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "description": "",
   "main": "src/index.ts",
-  "scripts": {},
+  "scripts": {
+    "unit-test": "jest -c ./jest.unit.config.ts"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BGZStephen/coding-with-stephen-typescript-postgres-api.git"
@@ -22,6 +24,8 @@
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
-    "@types/jest": "^29.5.14"
+    "@types/jest": "^29.5.14",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2"
   }
 }
