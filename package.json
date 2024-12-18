@@ -4,6 +4,7 @@
   "description": "",
   "main": "src/index.ts",
   "scripts": {
+    "dev": "ts-node ./src/index.ts",
     "unit-test": "jest -c ./jest.unit.config.ts"
   },
   "repository": {

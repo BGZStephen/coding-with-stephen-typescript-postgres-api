@@ -1,9 +1,24 @@
-describe("Our first test", () => {
-  test("Expects 1 to equal 1", () => {
-    expect(1).toEqual(1)
-  })
+import { app, listenerCallback, PORT } from "."
 
-  test("Expects 2 to equal 2", () => {
-    expect(2).toEqual(2)
+jest.mock("express")
+
+describe("Express", () => {
+  test("An instance of app is exported", () => {
+    expect(app).toBeDefined();
+  })
+})
+
+describe("listenerCallback", () => {
+  test("console.log is called when the listener is invoked", () => {
+    const log = global.console.log;
+    global.console.log = jest.fn();
+
+    listenerCallback();
+
+    expect(global.console.log).toHaveBeenCalledWith(
+      `API server listening on port ${PORT}`
+    )
+
+    global.console.log = log;
   })
 })
