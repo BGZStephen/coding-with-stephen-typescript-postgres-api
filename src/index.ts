@@ -1,6 +1,9 @@
 import express from "express";
+import { config, validateConfig } from "./config";
 
-export const PORT = 3000;
+validateConfig()
+
+export const PORT = config.PORT;
 
 export const app = express();
 
