@@ -4,14 +4,17 @@ dotenv.config();
 
 interface Config {
   PORT: string
+  API_URL: string
 }
 
 export const config: Config = {
-  PORT: process.env.PORT ?? ""
+  PORT: process.env.PORT ?? "",
+  API_URL: process.env.API_URL ?? ""
 }
 
 export const requiredConfigKeys: Array<keyof Config> = [
-  "PORT"
+  "PORT",
+  "API_URL"
 ]
 
 export function validateConfig(): void {

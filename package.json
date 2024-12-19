@@ -5,7 +5,8 @@
   "main": "src/index.ts",
   "scripts": {
     "dev": "ts-node ./src/index.ts",
-    "unit-test": "jest -c ./jest.unit.config.ts"
+    "unit-test": "jest -c ./jest.unit.config.ts",
+    "integration-test": "jest -c ./jest.integration.config.ts --runInBand"
   },
   "repository": {
     "type": "git",

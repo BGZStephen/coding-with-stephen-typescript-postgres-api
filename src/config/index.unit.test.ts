@@ -9,13 +9,15 @@ describe("config", () => {
     const processEnv = process.env;
 
     process.env = {
-      PORT: "3000"
+      PORT: "3000",
+      API_URL: "http://localhost:3000"
     }
 
     const { config } = require(".")
 
     expect(config).toEqual({
-      PORT: "3000"
+      PORT: "3000",
+      API_URL: "http://localhost:3000"
     })
 
     process.env = processEnv;
@@ -29,7 +31,8 @@ describe("config", () => {
     const { config } = require(".")
 
     expect(config).toEqual({
-      PORT: ""
+      PORT: "",
+      API_URL: ""
     })
 
     process.env = processEnv;
